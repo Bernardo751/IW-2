@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova JavaScript</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.css">
+
+</head>
+
+<body>
+    <div class="titulo1">
+         <h1 class="titulo">Prova Java Script</h1>
+    </div>
+   
+
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-3 border border-primary rounded">
+
+                <div>
+                    <h1 class="meutitulo">Exercício 1</h1>
+                    <p class="meutexto">Este exercício tem como finalidade mostrar se um numero é par ou impar</p>
+                </div>
+
+                <button type="button" class="btn btn-primary" onclick="minhaFuncao1()">Testar</button>
+                <script>
+                    function minhaFuncao1() {
+
+                        var par_impar = prompt("Me diga um número: ");
+                        var resultado = parseInt(par_impar) % 2;
+                        if (resultado == 0) {
+                            alert("O número escolhido é par.");
+                        } else {
+                            alert("O número escolhido é impar.");
+                        }
+                    }
+                </script>
+            </div>
+            <div class="col-md-3 border border-primary rounded">
+
+                <div>
+                    <h1 class="meutitulo">Exercício 2</h1>
+                    <p class="meutexto">Este exercício tem como finalidade mostrar se você é maior ou menor de idade</p>
+                </div>
+
+                <button type="button" class="btn btn-primary" onclick="minhaFuncao2()">Testar</button>
+                <script>
+                    function minhaFuncao2() {
+
+                        var idade = prompt("Qual é o seu idade?");
+                        if (idade < 18) {
+                            alert("Você é menor de idade");
+                        } else {
+                            alert("Você é maior de idade");
+                        }
+                    }
+                </script>
+            </div>
+            <div class="col-md-3 border border-primary rounded">
+
+                <div>
+                    <h1 class="meutitulo">Exercício 3</h1>
+                    <p class="meutexto">Este exercício tem como finalidade exibir os números de 1 a 10</p>
+                </div>
+
+                <button type="button" class="btn btn-primary" onclick="minhaFuncao3()">Testar</button>
+                <script>
+                    function minhaFuncao3() {
+
+                        for (var i = 0; i < 11; i++) {
+                            alert(i)
+                        }
+                    }
+                </script>
+            </div>
+            <div class="col-md-3 border border-primary rounded">
+
+                <div>
+                    <h1 class="meutitulo">Exercício 4</h1>
+                    <p class="meutexto">Este exercício tem como finalidade pedir um número ao usuário e exiba uma
+                        contagem regressiva até 0</p>
+                </div>
+
+                <button type="button" class="btn btn-primary" onclick="minhaFuncao4()">Testar</button>
+                <script>
+                    function minhaFuncao4() {
+
+                        var numero2 = prompt("Me diga um número para gerar uma ordem decrescente:");
+                        while (numero2 > -1) {
+                            alert(numero2);
+                            numero2--;
+
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-3 border border-primary rounded">
+
+                <div>
+                    <h1 class="meutitulo">Exercício 5</h1>
+                    <p class="meutexto">Este exercício tem como finalidade pedir um número e exiba a tabuada de 1 a 10
+                    </p>
+                </div>
+
+                <button type="button" class="btn btn-primary" onclick="minhaFuncao5()">Testar</button>
+                <script>
+                    function minhaFuncao5() {
+
+                        var numero3 = prompt("Me diga um número para mostra sua tabuada:");
+                        for (var m = 1; m < 11; m++) {
+                            mult = numero3 * m;
+                            alert(mult);
+                        }
+                    }
+                </script>
+            </div>
+            <div class="col-md-3 border border-primary rounded">
+
+                <div>
+                    <h1 class="meutitulo">Exercício 6</h1>
+                    <p class="meutexto">Este exercício tem como finalidade solicitar um número e some todos os números
+                        de 1 até ele.</p>
+                </div>
+
+                <button type="button" class="btn btn-primary" onclick="minhaFuncao6()">Testar</button>
+                <script>
+                    function minhaFuncao6() {
+
+                        var numero4 = prompt("Me diga um número:");
+                        var limite = parseInt(numero4);
+                        var soma = 0;
+
+                        for (var m = 1; m <= limite; m++) {
+                            soma = soma + m;
+                            alert(m);
+                        }
+                    }
+                </script>
+            </div>
+            <div class="col-md-3 border border-primary rounded">
+
+                <div>
+                    <h1 class="meutitulo">Exercício 7</h1>
+                    <p class="meutexto">Este exercício tem como finalidade pedir um número ao usuário e informe se ele é
+                        primo ou não.</p>
+                </div>
+
+                <button type="button" class="btn btn-primary" onclick="minhaFuncao7()">Testar</button>
+                <script>
+                    function minhaFuncao7() {
+
+                        var numero5 = parseInt(prompt("Digite um número para verificar se é primo:"));
+                        var primo = true;
+
+                        if (numero5 < 2) {
+                            primo = false;
+                        } else {
+                            for (var i = 2; i < numero5; i++) {
+                                if (numero5 % i === 0) {
+                                    primo = false;
+                                    break;
+                                }
+                            }
+                        }
+
+                        if (primo) {
+                            alert("O número " + numero5 + " é primo!");
+                        } else {
+                            alert("O número " + numero5 + " não é primo.");
+                        }
+                    }
+                </script>
+            </div>
+            <div class="col-md-3 border border-primary rounded">
+
+                <div>
+                    <h1 class="meutitulo">Exercício 8</h1>
+                    <p class="meutexto">Este exercício tem como finalidade pedir ao usuário um nome de usuário e uma
+                        senha. Se ele errar, peça novamente até acertar.
+                    </p>
+                </div>
+
+                <button type="button" class="btn btn-primary" onclick="minhaFuncao8()">Testar</button>
+                <script>
+                    function minhaFuncao8() {
+
+                        var usuariocerto = prompt("Digite um Nome de usuario:");
+                        var senhacerta = prompt("Digite uma senha");
+
+                        while (true) {
+                            var nome = prompt("Digite o nome para logar:");
+                            var senha = prompt("Digite a senha para logar:");
+                            if (nome == usuariocerto) {
+                                if (senha == senhacerta) {
+                                    alert("Usuario logado com sucesso")
+                                    break
+                                }
+                            }
+
+                            else {
+                                alert("Tente novamente")
+                            }
+                        }
+
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-3 border border-primary rounded">
+
+                <div>
+                    <h1 class="meutitulo">Exercício 9</h1>
+                    <p class="meutexto">Este exercício tem como finalidade solicitar ao usuário vários números e some-os
+                        até que ele digite um número negativo, então exiba o total.</p>
+                </div>
+
+                <button type="button" class="btn btn-primary" onclick="minhaFuncao9()">Testar</button>
+                <script>
+                    function minhaFuncao9() {
+
+                        var somatotal = 0;
+                        var continuar = true;
+
+                        while (continuar) {
+                            var numero6 = parseInt(prompt("digite um número para somar ou um número negativo para sair:"));
+
+                            if (numero6 < 0) {
+                                continuar = false;
+                            } else {
+                                somatotal += numero6;
+                                alert("Soma atual: " + somatotal);
+                            }
+                        }
+
+                        alert("O total da soma é: " + somatotal);
+                    }
+                </script>
+            </div>
+            <div class="col-md-3 border border-primary rounded">
+
+                <div>
+                    <h1 class="meutitulo">Exercício 10</h1>
+                    <p class="meutexto">Este exercício tem como finalidade escolher um número aleatório de 1 a 10 e peça
+                        ao usuário para adivinhar. Dê dicas até ele acertar.</p>
+                </div>
+
+                <button type="button" class="btn btn-primary" onclick="minhaFuncao10()">Testar</button>
+                <script>
+                    function minhaFuncao10() {
+
+                        var numerosecreto = 7;
+                        var chute;
+
+                        alert("adivinhe o número que eu estou pensando de 1 a 10!");
+
+                        while (chute != numerosecreto) {
+                            chute = parseInt(prompt("Qual o seu chute?"));
+
+                            if (chute > numerosecreto) {
+                                alert("alto demais! tente um número menor");
+                            } else if (chute < numerosecreto) {
+                                alert("baixo demais! tente um número maior");
+                            } else if (chute == numerosecreto) {
+                                alert("ok! você acertou, o número era " + numerosecreto);
+                            } else {
+                                alert("valor inválido digite um número");
+                            }
+                        }
+                    }
+                </script>
+            </div>
+            <div class="col-md-3 border border-primary rounded">
+
+                <div>
+                    <h1 class="meutitulo">Exercício 11</h1>
+                    <p class="meutexto">Este exercício tem como finalidade pedir um número e mostar o farorial
+                    </p>
+                </div>
+
+                <button type="button" class="btn btn-primary" onclick="minhaFuncao11()">Testar</button>
+                <script>
+                    function minhaFuncao11() {
+
+                        var numerofator = parseInt(prompt("Digite um número para calcular o fatorial:"));
+                        var resultado3 = 1;
+
+                        for (var i = 1; i <= numerofator; i++) {
+                            resultado3 = resultado3 * i;
+                        }
+                        alert("O fatorial de " + numerofator + " é: " + resultado3);
+                    }
+                </script>
+            </div>
+            <div class="col-md-3 border border-primary rounded">
+
+                <div>
+                    <h1 class="meutitulo">Exercício 12</h1>
+                    <p class="meutexto">Este exercício tem como finalidade solicitar uma nota de 0 a 10 e continue
+                        pedindo até que o usuário insira um valor válido.</p>
+                </div>
+
+                <button type="button" class="btn btn-primary" onclick="minhaFuncao12()">Testar</button>
+                <script>
+                    function minhaFuncao12() {
+
+                        var nota = -1;
+                        while (nota < 0 || nota > 10) {
+                            nota = parseFloat(prompt("digite uma nota valida 0 a 10:"));
+                            if (nota < 0 || nota > 10) {
+                                console.log("nota inválida! tente novamente");
+                            }
+                        }
+                        alert("nota aceita: " + nota);
+
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-3 border border-primary rounded">
+
+                <div>
+                    <h1 class="meutitulo">Exercício 13</h1>
+                    <p class="meutexto">Este exercício tem como finalidade pedir 3 notas ao usuário, calcule e exiba sua
+                        média. Informe se ele foi aprovado (média ≥ 7) ou reprovado</p>
+                </div>
+
+                <button type="button" class="btn btn-primary" onclick="minhaFuncao13()">Testar</button>
+                <script>
+                    function minhaFuncao13() {
+
+                        var numero7 = parseFloat(prompt("Digite a primeira nota:"));
+                        var numero8 = parseFloat(prompt("Digite a segunda nota:"));
+                        var numero9 = parseFloat(prompt("Digite a terceira nota:"));
+
+                        var media = (numero7 + numero8 + numero9) / 3;
+                        alert("sua média é: " + media.toFixed(2));
+
+                        if (media >= 7) {
+                            alert("aprovado!");
+                        } else {
+                            alert("reprovado");
+                        }
+                    }
+                </script>
+            </div>
+            <div class="col-md-3 border border-primary rounded">
+
+                <div>
+                    <h1 class="meutitulo">Exercício 14</h1>
+                    <p class="meutexto">Este exercício tem como finalidade pedir um valor ao usuário e informe as
+                        possíveis cédulas para saque (100, 50, 20, 10, 5, 2, 1).
+                    </p>
+                </div>
+
+                <button type="button" class="btn btn-primary" onclick="minhaFuncao14()">Testar</button>
+                <script>
+                    function minhaFuncao14() {
+
+                        var valor = parseInt(prompt("Valor:"));
+                        var numero10 = parseInt(valor / 100);
+                        valor %= 100;
+                        var numero11 = parseInt(valor / 50);
+                        valor %= 50;
+                        var numero12 = parseInt(valor / 20);
+                        valor %= 20;
+                        var numero13 = parseInt(valor / 10);
+                        valor %= 10;
+                        var numero14 = parseInt(valor / 5);
+                        valor %= 5;
+                        var numero15 = parseInt(valor / 2);
+                        valor %= 2;
+                        var numero16 = valor;
+                        if (numero10 > 0) alert(numero10 + " de 100");
+                        if (numero11 > 0) alert(numero11 + " de 50");
+                        if (numero12 > 0) alert(numero12 + " de 20");
+                        if (numero13 > 0) alert(numero13 + " de 10");
+                        if (numero14 > 0) alert(numero14 + " de 5");
+                        if (numero16 > 0) alert(numero16 + " de 1");
+                        if (numero15 > 0) alert(numero15 + " de 2");
+
+                    }
+                </script>
+            </div>
+            <div class="col-md-3 border border-primary rounded">
+
+                <div>
+                    <h1 class="meutitulo">Exercício 15</h1>
+                    <p class="meutexto">Este exercício tem como finalidade solicitar um número ao usuário e exiba todos
+                        os números ímpares de 1 até esse número.</p>
+                </div>
+
+                <button type="button" class="btn btn-primary" onclick="minhaFuncao15()">Testar</button>
+                <script>
+                    function minhaFuncao15() {
+
+                        var limite = parseInt(prompt("impares até:"));
+
+                        for (var i = 1; i <= limite; i++) {
+                            if (i % 2 !== 0) 
+                            alert(i);
+                        }
+
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
