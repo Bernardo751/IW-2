@@ -1,0 +1,88 @@
+<!-- 1. O que é DOM?
+O DOM (Document Object Model) é o HTML como um objeto estruturado. Enquanto o HTML é o código estático no arquivo, o DOM é a estrutura feita pelo navegador na memória para que o JavaScript consiga acessar, alterar ou excluir elementos da página HTML.
+
+2. O que é um nó (node)?
+Os elementos são as tags principais (como <div> ou <h1>). Os atributos são as propriedades dentro dessas tags (como um id ou src). Já os textos são o conteúdo escrito que fica dentro das tags.
+
+3. Métodos de seleção
+O getElementById() seleciona um elemento único pelo seu ID. O querySelector() localiza o primeiro elemento que corresponde a um seletor CSS. Já o querySelectorAll() captura todos os elementos que atendem ao critério, retornando uma lista.
+
+4. Diferença entre innerHTML e innerText
+O innerHTML interpreta e renderiza tags HTML inseridas no conteúdo. O innerText lida apenas com o texto puro e visível, ignorando qualquer formatação de tags e tratando tudo de forma literal.
+
+5. O que são eventos
+Eventos são gatilhos de interação. O onclick ocorre ao clicar em um elemento; o onchange detecta mudanças em campos de entrada; e o onmouseover identifica quando o mouse passa sobre um item. Eles permitem que a página reaja às ações do usuário. -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+    <section>
+        <h1>Minha Página</h1>
+        <p id="texto">Texto original</p>
+        <button onclick="mudarTexto()">Clique aqui</button>
+        <button onclick="voltarTexto()">Clique aqui</button>
+
+        <script>
+            function mudarTexto() {
+                document.getElementById("texto").innerText = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae nihil quae pariatur, deleniti consequatur aliquam id ipsum iste dolor quam placeat tempora mollitia vel voluptas amet in quas maxime veniam!";
+
+
+            }
+
+            function voltarTexto() {
+                document.getElementById("texto").innerText = "Texto original";
+
+
+            }
+        </script>
+    </section>
+    <section>
+        <h1>Mudar cor</h1>
+        <button onclick="cor()">Mudar cor</button>
+        <button onclick="voltarcor()">Voltar cor</button>
+
+        <script>
+            function cor() {
+                document.body.style.backgroundColor = "lightblue";
+            }
+            function voltarcor() {
+                document.body.style.backgroundColor = "white";
+            }
+
+        </script>
+    </section>
+    <section>
+        <h1>Contador: <span id="numero">0</span></h1>
+        <button onclick="alterar(1)">Aumentar</button>
+        <button onclick="alterar(-1)">Diminuir</button>
+        <button onclick="zerar()">Zerar</button>
+
+        <script>
+            let contagem = 0;
+
+            // Uma única função que aceita o valor da mudança (1 ou -1)
+            function alterar(valor) {
+                contagem += valor;
+                document.getElementById("numero").innerText = contagem;
+            }
+
+            function zerar() {
+                contagem = 0;
+                document.getElementById("numero").innerText = contagem;
+            }
+        </script>
+    </section>
+</body>
+
+</html>
