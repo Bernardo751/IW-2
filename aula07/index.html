@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <h1>Exercicio 1</h1>
+        <input type="text" id="inputTexto" placeholder="Digite algo">
+        <button onclick="mostrarTexto()">Exibir</button>
+        <p id="texto"></p>
+
+        <script>
+            function mostrarTexto() {
+                const input = document.getElementById('inputTexto').value;
+                document.getElementById('texto').innerText = input;
+            }
+        </script>
+    </section>
+    <section>
+        <h1>Exercicio 2</h1>
+        <input type="text" id="inputNome" placeholder="Seu nome">
+        <button onclick="saudar()">Saudar</button>
+        <p id="resultado2"></p>
+
+        <script>
+            function saudar() {
+                const nome = document.getElementById('inputNome').value;
+                document.getElementById('resultado2').innerText = `Olá, ${nome}!`;
+            }
+        </script>
+    </section>
+    <section>
+        <h1>Exercicio 3</h1>
+        <input type="number" id="inputIdade" placeholder="Sua idade">
+        <button onclick="verificarIdade()">Verificar</button>
+        <p id="resultado3"></p>
+
+        <script>
+            function verificarIdade() {
+                const idade = parseInt(document.getElementById('inputIdade').value);
+                const p = document.getElementById('resultado3');
+
+                if (idade >= 18) {
+                    p.innerText = "Maior de idade";
+                } else {
+                    p.innerText = "Menor de idade";
+                }
+            }
+        </script>
+    </section>
+    <section>
+        <h1>Exercicio 4</h1>
+        <button onclick="mudarCor()">Mudar Cor de Fundo</button>
+        <script>
+            function mudarCor() {
+                const cores = ['#f0f8ff', '#faebd7', '#e6e6fa', '#fff5ee', '#f5f5dc'];
+                const corAleatoria = cores[Math.floor(Math.random() * cores.length)];
+
+                document.body.style.backgroundColor = corAleatoria;
+            }
+        </script>
+    </section>
+    <section>
+
+        <h1>Exercicio 5</h1>
+        <button onclick="alternarModo()">Modo Escuro</button>
+
+        <script>
+            function alternarModo() {
+                const corpo = document.body;
+                if (corpo.style.backgroundColor === 'black') {
+                    corpo.style.backgroundColor = 'white';
+                    corpo.style.color = 'black';
+                } else {
+                    corpo.style.backgroundColor = 'black';
+                    corpo.style.color = 'white';
+                }
+            }
+        </script>
+    </section>
+    <section>
+
+        <h1>Exercicio 6</h1>
+        <input type="text" id="inputTarefa" placeholder="Digite uma tarefa">
+        <button onclick="adicionarNaLista()">Adicionar</button>
+
+        <ul id="listaSimples">
+        </ul>
+
+        <script>
+            function adicionarNaLista() {
+                const input = document.getElementById('inputTarefa');
+                const lista = document.getElementById('listaSimples');
+
+                if (input.value.trim() !== "") {
+                    const novoLi = document.createElement('li');
+                    novoLi.innerText = input.value;
+                    lista.appendChild(novoLi);
+                    input.value = "";
+                }
+            }
+        </script>
+    </section>
+    <section>
+
+        <h1>Exercicio 7</h1>
+        <p>Clique no item para removê-lo:</p>
+        <ul id="listaRemovivel">
+            <li onclick="remover(this)">Item A </li>
+            <li onclick="remover(this)">Item B </li>
+            <li onclick="remover(this)">Item C </li>
+        </ul>
+
+        <script>
+            function remover(elemento) {
+                elemento.remove();
+            }
+        </script>
+    </section>
+    <section>
+
+        <h1>Exercicio 8</h1>
+        <input type="number" id="numParImpar">
+        <button onclick="checarPar()">Verificar</button>
+        <p id="resPar"></p>
+
+        <script>
+            function checarPar() {
+                const num = document.getElementById('numParImpar').value;
+                const p = document.getElementById('resPar');
+                p.innerText = (num % 2 === 0) ? "É Par" : "É Ímpar";
+            }
+        </script>
+    </section>
+    <section>
+            <h1>Exercicio 9</h1>
+            <input type="password" id="senha" placeholder="Mínimo 6 caracteres">
+            <button onclick="validarSenha()">Validar</button>
+            <p id="msgSenha"></p>
+
+            <script>
+                function validarSenha() {
+                    const senha = document.getElementById('senha').value;
+                    const msg = document.getElementById('msgSenha');
+
+                    if (senha.length >= 6) {
+                        msg.innerText = "Senha válida!";
+                        msg.style.color = "green";
+                    } else {
+                        msg.innerText = "Senha muito curta!";
+                        msg.style.color = "red";
+                    }
+                }
+            </script>>
+    </section>
+    <section>
+
+            <h1>Exercicio 10</h1>
+            <h3>Cadastro de Nomes</h3>
+            <input type="text" id="nomeCad" placeholder="Nome">
+            <button onclick="cadastrar()">Adicionar</button>
+
+            <p>Total: <span id="contador">0</span></p>
+            <ul id="listaCadastrados"></ul>
+
+            <script>
+                function atualizarContador() {
+                    const total = document.querySelectorAll('#listaCadastrados li').length;
+                    document.getElementById('contador').innerText = total;
+                }
+
+                function cadastrar() {
+                    const nome = document.getElementById('nomeCad').value;
+                    if (!nome) return;
+
+                    const lista = document.getElementById('listaCadastrados');
+                    const li = document.createElement('li');
+
+                    li.innerHTML = `
+        ${nome} 
+        <button onclick="removerItem(this)">Remover</button>
+    `;
+
+                    lista.appendChild(li);
+                    document.getElementById('nomeCad').value = "";
+                    atualizarContador();
+                }
+
+                function removerItem(botao) {
+                    botao.parentElement.remove();
+                    atualizarContador();
+                }
+            </script>
+    </section>
+
+
+</body>
+
+</html>

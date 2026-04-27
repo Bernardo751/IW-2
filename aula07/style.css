@@ -1,0 +1,76 @@
+  /* Configurações Gerais */
+        body {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start; /* Impede de esticar até o fim da página */
+            flex-wrap: wrap;
+            gap: 25px;
+            padding: 40px;
+            margin: 0;
+            background-color: #f4f7f6;
+            min-height: 100vh;
+        }
+        
+        section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            width: 320px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            text-align: center;
+            
+            /* ESTA LINHA GARANTE QUE TODAS TENHAM O MESMO TAMANHO */
+            min-height: 400px; 
+            
+            /* Opcional: Garante que o conteúdo dentro da section se organize bem */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+        }
+
+        h1 {
+            color: #333;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            min-height: 60px;
+        }
+
+        /* Estilo dos Botões */
+        button {
+            background-color: #4A90E2;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            margin: 5px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #357ABD;
+            box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        /* Botões de variação (opcional) */
+        button.secondary {
+            background-color: #6c757d;
+        }
