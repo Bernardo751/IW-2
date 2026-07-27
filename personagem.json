@@ -1,0 +1,36 @@
+{
+  "personagem": {
+    "nome": "Motoqueiro Fantasma (Ghost Rider / Johnny Blaze)",
+    "franquia": "Marvel Comics",
+    "origem": "Waukegan, Illinois",
+    "primeira_aparicao": "Marvel Spotlight #5 (1972)",
+    "perfil_fisico": {
+      "altura": "Aprox. 1.88m",
+      "porte_fisico": "Atléco / Esquelético em chamas",
+      "marca_registrada": "Crânio flamejante e jaqueta de couro com correntes",
+      "veiculo": "Hell Cycle (Moto do Inferno)"
+    },
+    "atributos_sobrehumanos": {
+      "forca": "Sobre-humana (capaz de erguer toneladas)",
+      "durabilidade": "Quase invulnerável a danos convencionais",
+      "regeneracao": "Fator de cura místico e reconstituição corpórea",
+      "imortalidade": "Imortalidade trazida pela natureza demoníaca de Zarathos"
+    },
+    "combate": {
+      "arma_favorita": "Corrente do Fogo do Inferno e Olhar da Penitência",
+      "estilo": "Combate místico, uso de fogo hellfire e pilotagem extrema",
+      "fraqueza_notavel": "Armas celestiais ou sagradas potentes"
+    },
+    "psicologia": {
+      "motivacao": "Punição dos culpados e proteção dos inocentes",
+      "estado_mental": "Conflito constante entre a humanidade do hospedeiro e o Espírito da Vingança",
+      "gatilho_sonoro": "O som do motor da moto e o urro de chamas"
+    },
+    "variantes": [
+      "Johnny Blaze",
+      "Danny Ketch",
+      "Robbie Reyes (Motorista Fantasma)",
+      "Cosmic Ghost Rider (Frank Castle)"
+    ]
+  }
+}
