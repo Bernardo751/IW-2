@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta Pokémon</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Consulta Pokémon</h1>
+
+        <input type="number" id="numero" placeholder="Número do Pokémon">
+
+        <button onclick="callAPI()">Buscar</button>
+
+        <div id="pokemon">
+
+            <h2 id="nome"></h2>
+
+            <img id="imagem" src="img/poki.png" alt="Pokémon">
+
+            <p id="tipo"></p>
+
+            <button id="shiny" onclick="mostrarShiny()">
+                Mostrar Shiny
+            </button>
+
+        </div>
+
+        <p id="erro"></p>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
